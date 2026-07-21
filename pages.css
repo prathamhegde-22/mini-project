@@ -1,0 +1,221 @@
+/* =========================================================
+   PAGES.CSS — shared styles for every inner page:
+   jobs.html, contact.html, account.html, post-job.html
+   ========================================================= */
+
+/* --- generic dark page header, used at top of every inner page --- */
+.page-head{
+  background: var(--ink);
+  color: var(--paper);
+  padding: 56px 0 44px;
+}
+.page-head h1{ font-size: 38px; margin-top: 14px; }
+.page-head p{ color: rgba(238,241,236,.65); margin-top: 12px; max-width: 55ch; }
+
+/* =========================================================
+   jobs.html — filter sidebar + job listing rows
+   ========================================================= */
+.board{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  padding: 56px 0 100px;
+}
+
+.filters{ align-self: start; position: sticky; top: 96px; }
+.filter-block{ border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 22px; }
+.filter-block h4{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.filter-row{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+}
+.filter-row input{ accent-color: var(--teal); width: 15px; height: 15px; }
+.search-box{ display: flex; border: 1px solid var(--line); background: var(--card); }
+.search-box input{ border: 0; background: transparent; padding: 11px 12px; width: 100%; }
+.search-box button{
+  border: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.results-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+.results-head select{ border: 1px solid var(--line); background: var(--card); padding: 8px 10px; }
+
+.job-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--teal);
+  padding: 24px 26px;
+  margin-bottom: 16px;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.job-row:hover{ box-shadow: 0 12px 22px rgba(20,24,31,.07); transform: translateY(-2px); }
+.job-row .role{ font-family: var(--font-mono); font-size: 18px; font-weight: 600; }
+.job-row .co{ color: var(--teal); font-size: 14px; margin-top: 4px; }
+.job-row .desc{ font-size: 14px; color: var(--ink-soft); margin-top: 10px; max-width: 62ch; }
+.job-row .meta{ display:flex; gap:8px; margin-top: 14px; flex-wrap: wrap; }
+.job-row .tag{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 20px;
+  color: var(--ink-soft);
+}
+.job-row .right{ text-align: right; white-space: nowrap; }
+.job-row .pay{ font-family: var(--font-mono); font-size: 15px; display: block; margin-bottom: 12px; }
+.job-row .posted{ font-size: 12px; color: var(--ink-soft); display:block; margin-top: 10px; }
+
+.pagination{ display: flex; justify-content: center; gap: 8px; margin-top: 40px; font-family: var(--font-mono); font-size: 13px; }
+.pagination a{
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+.pagination a.active{ background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* =========================================================
+   Shared form styling — used by contact.html, account.html,
+   post-job.html
+   ========================================================= */
+.form-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--signal);
+  padding: 40px;
+}
+.form-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field{ margin-bottom: 22px; }
+.field label{
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.field input, .field select, .field textarea{
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 12px 14px;
+  border-radius: 2px;
+}
+.field textarea{ resize: vertical; min-height: 130px; }
+.field-hint{ font-size: 12.5px; color: var(--ink-soft); margin-top: 6px; }
+
+/* =========================================================
+   contact.html — info panel + form layout
+   ========================================================= */
+.contact-layout{ display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; padding: 80px 0 110px; }
+.contact-info h3{ font-size: 18px; margin-bottom: 10px; margin-top: 30px; }
+.contact-info h3:first-child{ margin-top: 0; }
+.contact-info p, .contact-info a{ color: var(--ink-soft); font-size: 14.5px; }
+.contact-info a{ color: var(--teal); }
+.info-block{ border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+.info-block:first-child{ border-top: none; padding-top: 0; margin-top: 0; }
+
+/* =========================================================
+   account.html — sign in / create account tabs
+   ========================================================= */
+.account-wrap{ max-width: 480px; margin: 0 auto; padding: 80px 32px 120px; }
+.account-tabs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+.account-tabs a{
+  text-align: center;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+}
+.account-tabs a.active{ background: var(--ink); color: var(--paper); }
+.account-tabs a:first-child{ border-right: 1px solid var(--line); }
+.form-foot{ text-align: center; margin-top: 18px; font-size: 13.5px; color: var(--ink-soft); }
+.form-foot a{ color: var(--teal); }
+.divider{ display: flex; align-items: center; gap: 14px; margin: 24px 0; color: var(--ink-soft); font-size: 12.5px; font-family: var(--font-mono); }
+.divider::before, .divider::after{ content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* =========================================================
+   post-job.html — employer job-posting form
+   ========================================================= */
+.postjob-layout{ display: grid; grid-template-columns: 1.3fr .7fr; gap: 48px; padding: 70px 0 110px; }
+.postjob-side{
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  padding: 28px;
+  align-self: start;
+  position: sticky;
+  top: 96px;
+}
+.postjob-side h4{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+.postjob-side li{
+  color: var(--ink-soft);
+  font-size: 14px;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 12px;
+}
+.postjob-side li::before{ content: "—"; position: absolute; left: 0; color: var(--teal); }
+.section-label{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--teal);
+  margin: 34px 0 18px;
+}
+.section-label:first-child{ margin-top: 0; }
+
+@media (max-width: 900px){
+  .board, .contact-layout, .postjob-layout{ grid-template-columns: 1fr; }
+  .filters{ position: static; }
+  .job-row{ grid-template-columns: 1fr; }
+  .job-row .right{ text-align: left; }
+  .form-row{ grid-template-columns: 1fr; }
+  .postjob-side{ position: static; }
+}

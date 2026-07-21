@@ -1,0 +1,163 @@
+/* =========================================================
+   HOME.CSS — index.html only
+   Signature element: the "corkboard" hero — job postings as
+   pinned index cards, tilted, layered behind the headline.
+   ========================================================= */
+
+.hero{
+  background: var(--ink);
+  color: var(--paper);
+  padding: 90px 0 120px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.hero .eyebrow{ color: var(--signal); }
+.hero .eyebrow::before{ background: var(--signal); }
+.hero h1{
+  font-size: clamp(40px, 5vw, 60px);
+  margin-top: 18px;
+  letter-spacing: -.01em;
+}
+.hero h1 .hl{ color: var(--signal); font-style: italic; }
+.hero p.lead{
+  margin-top: 22px;
+  max-width: 46ch;
+  font-size: 17.5px;
+  color: rgba(238,241,236,.72);
+}
+.hero-actions{ margin-top: 36px; display: flex; gap: 16px; align-items: center; }
+.hero-note{ font-family: var(--font-mono); font-size: 12.5px; color: rgba(238,241,236,.5); }
+
+/* --- corkboard --- */
+.corkboard{ position: relative; height: 430px; }
+.pin-card{
+  position: absolute;
+  width: 230px;
+  background: var(--card);
+  color: var(--ink);
+  padding: 18px 20px 20px;
+  border-radius: 2px;
+  box-shadow: 0 18px 30px rgba(0,0,0,.35);
+}
+.pin-card::before{
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--pin);
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+.pin-card .role{ font-family: var(--font-mono); font-size: 15px; font-weight: 600; }
+.pin-card .co{ font-size: 13px; color: var(--ink-soft); margin-top: 4px; }
+.pin-card .meta{ display:flex; gap:8px; margin-top: 12px; flex-wrap: wrap; }
+.pin-card .tag{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  border-radius: 20px;
+  color: var(--ink-soft);
+}
+.pin-card.c1{ top: 0;    left: 10%; transform: rotate(-4deg); z-index: 3; }
+.pin-card.c2{ top: 60px; left: 42%; transform: rotate(3deg);  z-index: 2; }
+.pin-card.c3{ top: 210px; left: 6%;  transform: rotate(2deg);  z-index: 1; }
+.pin-card.c4{ top: 250px; left: 46%; transform: rotate(-3deg); z-index: 2; }
+
+/* --- stats strip --- */
+.stats{ border-bottom: 1px solid var(--line); padding: 46px 0; }
+.stats-row{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.stat b{ font-family: var(--font-display); font-size: 38px; display: block; }
+.stat span{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* --- section shell --- */
+.section{ padding: 96px 0; }
+.section-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 44px;
+  gap: 24px;
+}
+.section-head h2{ font-size: 34px; margin-top: 12px; max-width: 20ch; }
+.section-head p{ color: var(--ink-soft); max-width: 38ch; font-size: 15px; }
+
+/* --- featured jobs grid --- */
+.jobs-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.job-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--teal);
+  padding: 26px;
+  border-radius: 2px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.job-card:hover{ transform: translateY(-4px); box-shadow: 0 14px 24px rgba(20,24,31,.08); }
+.job-card .role{ font-family: var(--font-mono); font-size: 17px; font-weight: 600; }
+.job-card .co{ color: var(--ink-soft); font-size: 14px; margin-top: 6px; }
+.job-card .desc{ font-size: 14px; color: var(--ink-soft); margin-top: 14px; }
+.job-card .meta{ display:flex; gap:8px; margin-top: 18px; flex-wrap: wrap; }
+.job-card .tag{
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: 20px;
+  color: var(--ink-soft);
+}
+.job-card .foot{ display:flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+.job-card .pay{ font-family: var(--font-mono); font-size: 13px; color: var(--ink); }
+.job-card .apply{ font-family: var(--font-mono); font-size: 12.5px; color: var(--teal); border-bottom: 1px solid var(--teal); }
+
+/* --- categories --- */
+.cat-strip{ background: var(--paper-2); }
+.cat-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.cat-tile{ background: var(--paper-2); padding: 34px 22px; transition: background .15s ease; }
+.cat-tile:hover{ background: var(--paper); }
+.cat-tile .count{ font-family: var(--font-mono); font-size: 12px; color: var(--teal); }
+.cat-tile h3{ font-size: 19px; margin-top: 10px; }
+
+/* --- how it works --- */
+.steps{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.step{ border-top: 1px solid var(--line); padding-top: 22px; }
+.step .num{ font-family: var(--font-mono); color: var(--signal); font-size: 13px; }
+.step h3{ font-size: 21px; margin-top: 10px; }
+.step p{ color: var(--ink-soft); font-size: 14.5px; margin-top: 10px; }
+
+/* --- CTA banner --- */
+.cta-banner{ background: var(--ink); color: var(--paper); padding: 80px 0; text-align: center; }
+.cta-banner h2{ font-size: 36px; max-width: 22ch; margin: 0 auto; }
+.cta-banner p{ color: rgba(238,241,236,.7); margin-top: 16px; }
+.cta-banner .hero-actions{ justify-content: center; margin-top: 30px; }
+
+@media (max-width: 900px){
+  .hero-grid, .jobs-grid, .steps, .stats-row{ grid-template-columns: 1fr; }
+  .cat-grid{ grid-template-columns: 1fr 1fr; }
+  .corkboard{ display: none; }
+}

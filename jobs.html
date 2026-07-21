@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse Jobs — Northlane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">north<em>lane</em></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="jobs.html" class="active">Browse Jobs</a>
+        <a href="post-job.html">Post a Job</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="account.html" class="btn btn-ghost">Sign in</a>
+        <a href="post-job.html" class="btn btn-primary">Post a job</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">2,481 open postings</span>
+      <h1>Browse open roles</h1>
+      <p>Every listing below was confirmed with the hiring company in the last 7 days. Filter by field, location, or schedule.</p>
+    </div>
+  </section>
+
+  <section class="container board">
+
+    <aside class="filters">
+      <div class="search-box" style="margin-bottom:28px;">
+        <input type="text" placeholder="Search job title...">
+        <button type="button">Search</button>
+      </div>
+
+      <div class="filter-block">
+        <h4>Field</h4>
+        <label class="filter-row"><input type="checkbox" checked> Design</label>
+        <label class="filter-row"><input type="checkbox"> Operations</label>
+        <label class="filter-row"><input type="checkbox"> Healthcare</label>
+        <label class="filter-row"><input type="checkbox"> Trades</label>
+        <label class="filter-row"><input type="checkbox"> Data &amp; Engineering</label>
+        <label class="filter-row"><input type="checkbox"> Culinary</label>
+      </div>
+
+      <div class="filter-block">
+        <h4>Schedule</h4>
+        <label class="filter-row"><input type="checkbox"> Full-time</label>
+        <label class="filter-row"><input type="checkbox"> Part-time</label>
+        <label class="filter-row"><input type="checkbox"> Contract</label>
+      </div>
+
+      <div class="filter-block">
+        <h4>Location</h4>
+        <label class="filter-row"><input type="checkbox"> Remote</label>
+        <label class="filter-row"><input type="checkbox"> Hybrid</label>
+        <label class="filter-row"><input type="checkbox"> On-site</label>
+      </div>
+
+      <div class="filter-block" style="border-bottom:none;">
+        <h4>Pay range</h4>
+        <label class="filter-row"><input type="checkbox"> $0 – $50k</label>
+        <label class="filter-row"><input type="checkbox"> $50k – $90k</label>
+        <label class="filter-row"><input type="checkbox"> $90k+</label>
+      </div>
+    </aside>
+
+    <div class="results">
+      <div class="results-head">
+        <span>Showing 1–6 of 2,481 postings</span>
+        <select>
+          <option>Sort: Newest first</option>
+          <option>Sort: Highest pay</option>
+          <option>Sort: Closest match</option>
+        </select>
+      </div>
+
+      <article class="job-row">
+        <div>
+          <div class="role">Senior Product Designer</div>
+          <div class="co">Fennwick Studio · Remote</div>
+          <p class="desc">Own end-to-end design for our field-service platform, from research through shipped UI. Portfolio required.</p>
+          <div class="meta"><span class="tag">Design</span><span class="tag">Remote</span><span class="tag">Full-time</span></div>
+        </div>
+        <div class="right">
+          <span class="pay">$110k–$140k</span>
+          <a class="btn btn-outline" href="account.html">Apply</a>
+          <span class="posted">Posted 2 days ago</span>
+        </div>
+      </article>
+
+      <article class="job-row">
+        <div>
+          <div class="role">Warehouse Operations Lead</div>
+          <div class="co">Kestrel Logistics · Nashville, TN</div>
+          <p class="desc">Run a 40-person shift across inbound and fulfillment for our regional distribution hub.</p>
+          <div class="meta"><span class="tag">Operations</span><span class="tag">On-site</span><span class="tag">Full-time</span></div>
+        </div>
+        <div class="right">
+          <span class="pay">$58k–$66k</span>
+          <a class="btn btn-outline" href="account.html">Apply</a>
+          <span class="posted">Posted 3 days ago</span>
+        </div>
+      </article>
+
+      <article class="job-row">
+        <div>
+          <div class="role">Registered Nurse, ICU</div>
+          <div class="co">Cedarbrook Medical · Portland, OR</div>
+          <p class="desc">Join a 12-bed ICU with a 3:1 patient ratio and a genuinely supportive charge team. Nights only.</p>
+          <div class="meta"><span class="tag">Healthcare</span><span class="tag">On-site</span><span class="tag">Full-time</span></div>
+        </div>
+        <div class="right">
+          <span class="pay">$46/hr</span>
+          <a class="btn btn-outline" href="account.html">Apply</a>
+          <span class="posted">Posted 1 day ago</span>
+        </div>
+      </article>
+
+      <article class="job-row">
+        <div>
+          <div class="role">Junior Data Analyst</div>
+          <div class="co">Kestrel Logistics · Hybrid</div>
+          <p class="desc">Build the weekly reporting layer for a fleet of 300+ vehicles. SQL-first, dashboards second.</p>
+          <div class="meta"><span class="tag">Data</span><span class="tag">Hybrid</span><span class="tag">Entry-level</span></div>
+        </div>
+        <div class="right">
+          <span class="pay">$62k–$74k</span>
+          <a class="btn btn-outline" href="account.html">Apply</a>
+          <span class="posted">Posted 4 days ago</span>
+        </div>
+      </article>
+
+      <article class="job-row">
+        <div>
+          <div class="role">Commercial Electrician</div>
+          <div class="co">Harlow Build Co. · Denver, CO</div>
+          <p class="desc">Licensed journeyman wanted for a 14-month commercial build. Union scale, per diem included.</p>
+          <div class="meta"><span class="tag">Trades</span><span class="tag">On-site</span><span class="tag">Contract</span></div>
+        </div>
+        <div class="right">
+          <span class="pay">$38/hr</span>
+          <a class="btn btn-outline" href="account.html">Apply</a>
+          <span class="posted">Posted 5 days ago</span>
+        </div>
+      </article>
+
+      <article class="job-row">
+        <div>
+          <div class="role">Pastry Cook</div>
+          <div class="co">Marrow &amp; Sound · Austin, TX</div>
+          <p class="desc">Small-batch bakery looking for someone who cares as much about lamination as we do.</p>
+          <div class="meta"><span class="tag">Culinary</span><span class="tag">On-site</span><span class="tag">Part-time</span></div>
+        </div>
+        <div class="right">
+          <span class="pay">$19/hr</span>
+          <a class="btn btn-outline" href="account.html">Apply</a>
+          <span class="posted">Posted 6 days ago</span>
+        </div>
+      </article>
+
+      <nav class="pagination">
+        <a href="#">‹</a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">…</a>
+        <a href="#">414</a>
+        <a href="#">›</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <h4>Northlane</h4>
+        <p>A hand-checked job board connecting people with employers who are ready to hire, not just ready to post.</p>
+      </div>
+      <div>
+        <h4>For seekers</h4>
+        <ul>
+          <li><a href="jobs.html">Browse jobs</a></li>
+          <li><a href="account.html">Create profile</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For employers</h4>
+        <ul>
+          <li><a href="post-job.html">Post a job</a></li>
+          <li><a href="contact.html">Talk to sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Northlane. All rights reserved.</span>
+      <span>Made for people looking for work.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

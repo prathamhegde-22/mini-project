@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post a Job — Northlane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">north<em>lane</em></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Browse Jobs</a>
+        <a href="post-job.html" class="active">Post a Job</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="account.html" class="btn btn-ghost">Sign in</a>
+        <a href="post-job.html" class="btn btn-primary">Post a job</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">For employers</span>
+      <h1>Post an opening</h1>
+      <p>Every listing gets a verification call before it goes live, so give us details a real candidate would want to see.</p>
+    </div>
+  </section>
+
+  <section class="container postjob-layout">
+    <form class="form-card" action="#" method="post">
+
+      <div class="section-label">Role details</div>
+      <div class="form-row">
+        <div class="field">
+          <label for="title">Job title</label>
+          <input id="title" type="text" name="title" placeholder="Senior Product Designer">
+        </div>
+        <div class="field">
+          <label for="company">Company name</label>
+          <input id="company" type="text" name="company" placeholder="Fennwick Studio">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="field">Field</label>
+          <select id="field" name="field">
+            <option>Design</option>
+            <option>Operations</option>
+            <option>Healthcare</option>
+            <option>Trades</option>
+            <option>Data &amp; Engineering</option>
+            <option>Culinary</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="level">Experience level</label>
+          <select id="level" name="level">
+            <option>Entry-level</option>
+            <option>Mid-level</option>
+            <option>Senior</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section-label">Location &amp; schedule</div>
+      <div class="form-row">
+        <div class="field">
+          <label for="location">Location</label>
+          <input id="location" type="text" name="location" placeholder="Portland, OR">
+        </div>
+        <div class="field">
+          <label for="arrangement">Work arrangement</label>
+          <select id="arrangement" name="arrangement">
+            <option>On-site</option>
+            <option>Hybrid</option>
+            <option>Remote</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="type">Employment type</label>
+          <select id="type" name="type">
+            <option>Full-time</option>
+            <option>Part-time</option>
+            <option>Contract</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pay">Pay range</label>
+          <input id="pay" type="text" name="pay" placeholder="$90k – $120k or $25/hr">
+        </div>
+      </div>
+
+      <div class="section-label">Description</div>
+      <div class="field">
+        <label for="summary">Role summary</label>
+        <textarea id="summary" name="summary" placeholder="What will this person actually be doing day to day?"></textarea>
+      </div>
+      <div class="field">
+        <label for="requirements">Requirements</label>
+        <textarea id="requirements" name="requirements" placeholder="What's required vs. nice-to-have?"></textarea>
+      </div>
+
+      <div class="section-label">Contact for verification</div>
+      <div class="form-row">
+        <div class="field">
+          <label for="contact-name">Hiring contact name</label>
+          <input id="contact-name" type="text" name="contact-name" placeholder="Full name">
+        </div>
+        <div class="field">
+          <label for="contact-email">Hiring contact email</label>
+          <input id="contact-email" type="email" name="contact-email" placeholder="you@company.com">
+        </div>
+      </div>
+      <p class="field-hint">We'll call or email this contact before the listing goes live. Postings are typically reviewed within 2 business days.</p>
+
+      <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px;">Submit for review</button>
+    </form>
+
+    <aside class="postjob-side">
+      <h4>Why postings get verified</h4>
+      <ul>
+        <li>Job seekers trust that every listing here is real and still open.</li>
+        <li>Verified postings get more applications than unverified boards.</li>
+        <li>We pull any listing that goes quiet for more than 7 days.</li>
+      </ul>
+      <h4 style="margin-top:28px;">What happens next</h4>
+      <ul>
+        <li>We review your submission within 2 business days.</li>
+        <li>A verification specialist confirms details with your listed contact.</li>
+        <li>Your posting goes live and stays up for 30 days, renewable for free.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <h4>Northlane</h4>
+        <p>A hand-checked job board connecting people with employers who are ready to hire, not just ready to post.</p>
+      </div>
+      <div>
+        <h4>For seekers</h4>
+        <ul>
+          <li><a href="jobs.html">Browse jobs</a></li>
+          <li><a href="account.html">Create profile</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For employers</h4>
+        <ul>
+          <li><a href="post-job.html">Post a job</a></li>
+          <li><a href="contact.html">Talk to sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Northlane. All rights reserved.</span>
+      <span>Made for people looking for work.</span>
+    </div>
+  </footer>
+
+</body>
+</html>

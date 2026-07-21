@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Northlane</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">north<em>lane</em></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Browse Jobs</a>
+        <a href="post-job.html">Post a Job</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="account.html" class="btn btn-ghost">Sign in</a>
+        <a href="post-job.html" class="btn btn-primary">Post a job</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Questions, feedback, or a listing to report?</h1>
+      <p>We read every message ourselves. Expect a reply within one business day.</p>
+    </div>
+  </section>
+
+  <section class="container contact-layout">
+    <div class="contact-info">
+      <div class="info-block">
+        <h3>General support</h3>
+        <p>For account help or questions about applications.</p>
+        <a href="mailto:help@northlane.example">help@northlane.example</a>
+      </div>
+      <div class="info-block">
+        <h3>Employer sales</h3>
+        <p>To post a job or ask about verification.</p>
+        <a href="mailto:employers@northlane.example">employers@northlane.example</a>
+      </div>
+      <div class="info-block">
+        <h3>Report a listing</h3>
+        <p>If a posting looks outdated, closed, or fake, tell us and we'll pull it within 48 hours.</p>
+        <a href="mailto:report@northlane.example">report@northlane.example</a>
+      </div>
+      <div class="info-block">
+        <h3>Office</h3>
+        <p>412 Alder Street, Suite 200<br>Portland, OR 97205</p>
+      </div>
+    </div>
+
+    <form class="form-card" action="#" method="post">
+      <div class="form-row">
+        <div class="field">
+          <label for="fname">First name</label>
+          <input id="fname" type="text" name="fname" placeholder="Jordan">
+        </div>
+        <div class="field">
+          <label for="lname">Last name</label>
+          <input id="lname" type="text" name="lname" placeholder="Reyes">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com">
+      </div>
+
+      <div class="field">
+        <label for="topic">What's this about?</label>
+        <select id="topic" name="topic">
+          <option>General support</option>
+          <option>Posting a job</option>
+          <option>Reporting a listing</option>
+          <option>Something else</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Tell us what's going on..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Send message</button>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <h4>Northlane</h4>
+        <p>A hand-checked job board connecting people with employers who are ready to hire, not just ready to post.</p>
+      </div>
+      <div>
+        <h4>For seekers</h4>
+        <ul>
+          <li><a href="jobs.html">Browse jobs</a></li>
+          <li><a href="account.html">Create profile</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For employers</h4>
+        <ul>
+          <li><a href="post-job.html">Post a job</a></li>
+          <li><a href="contact.html">Talk to sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Sign in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Northlane. All rights reserved.</span>
+      <span>Made for people looking for work.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
