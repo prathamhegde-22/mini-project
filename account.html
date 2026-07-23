@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign In — Northlane</title>
+<title>Sign In / Create Account — JOBPORTAL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="brand">north<em>lane</em></a>
+      <a href="index.html" class="brand">JOB<em>PORTAL</em></a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="jobs.html">Browse Jobs</a>
@@ -28,39 +28,106 @@
   </header>
 
   <section class="account-wrap">
+
+    <!-- CSS-only tab switch: two hidden radios drive which panel shows -->
+    <input type="radio" name="account-tab" id="tab-signin" class="tab-input" checked>
+    <input type="radio" name="account-tab" id="tab-create" class="tab-input">
+
     <div class="account-tabs">
-      <a href="#" class="active" onclick="return false;">Sign in</a>
-      <a href="#" onclick="return false;">Create account</a>
+      <label for="tab-signin" class="tab-label">Sign in</label>
+      <label for="tab-create" class="tab-label">Create account</label>
     </div>
 
-    <span class="eyebrow">Welcome back</span>
-    <h1 style="font-size:30px; margin-top:12px; margin-bottom:28px;">Sign in to your profile</h1>
+    <!-- ===================== SIGN IN PANEL ===================== -->
+    <div class="account-panel signin-panel">
+      <span class="eyebrow">Welcome back</span>
+      <h1 class="account-title">Sign in to your profile</h1>
 
-    <form class="form-card" action="#" method="post">
-      <div class="field">
-        <label for="email">Email address</label>
-        <input id="email" type="email" name="email" placeholder="you@example.com">
-      </div>
+      <form class="form-card" action="#" method="post">
+        <div class="field">
+          <label for="si-email">Email address</label>
+          <input id="si-email" type="email" name="email" placeholder=" ">
+        </div>
 
-      <div class="field">
-        <label for="password">Password</label>
-        <input id="password" type="password" name="password" placeholder="••••••••">
-      </div>
+        <div class="field">
+          <label for="si-password">Password</label>
+          <input id="si-password" type="password" name="password" placeholder=" ">
+        </div>
 
-      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+        <p class="field-hint" style="margin:-10px 0 20px; text-align:right;"><a href="#">Forgot password?</a></p>
 
-      <div class="divider">or</div>
+        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
 
-      <button type="button" class="btn btn-outline btn-block">Continue with Google</button>
-    </form>
+        <div class="divider">or</div>
 
-    <p class="form-foot">Don't have an account? <a href="#">Create one for free</a></p>
+        <button type="button" class="btn btn-outline btn-block">Continue with Google</button>
+      </form>
+
+      <p class="form-foot">Don't have an account? <label for="tab-create" class="form-foot-link">Create one for free</label></p>
+    </div>
+
+    <!-- ===================== CREATE ACCOUNT PANEL ===================== -->
+    <div class="account-panel create-panel">
+      <span class="eyebrow">New here</span>
+      <h1 class="account-title">Create your free account</h1>
+
+      <form class="form-card" action="#" method="post">
+        <div class="field">
+          <label for="ca-name">Full name</label>
+          <input id="ca-name" type="text" name="name" placeholder=" ">
+        </div>
+
+        <div class="field">
+          <label for="ca-email">Email address</label>
+          <input id="ca-email" type="email" name="email" placeholder=" ">
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="ca-password">Password</label>
+            <input id="ca-password" type="password" name="password" placeholder=" ">
+          </div>
+          <div class="field">
+            <label for="ca-confirm">Confirm password</label>
+            <input id="ca-confirm" type="password" name="confirm" placeholder=" ">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>I'm creating an account to...</label>
+          <div class="role-toggle">
+            <label class="role-option">
+              <input type="radio" name="account-role" checked>
+              <span>Find a job</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="account-role">
+              <span>Hire for a role</span>
+            </label>
+          </div>
+        </div>
+
+        <label class="filter-row" style="margin-bottom:22px;">
+          <input type="checkbox">
+          I agree to the Terms of Service and Privacy Policy
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-block">Create account</button>
+
+        <div class="divider">or</div>
+
+        <button type="button" class="btn btn-outline btn-block">Continue with Google</button>
+      </form>
+
+      <p class="form-foot">Already have an account? <label for="tab-signin" class="form-foot-link">Sign in instead</label></p>
+    </div>
+
   </section>
 
   <footer class="site-footer">
     <div class="container footer-top">
       <div>
-        <h4>Northlane</h4>
+        <h4>JOBPORTAL</h4>
         <p>A hand-checked job board connecting people with employers who are ready to hire, not just ready to post.</p>
       </div>
       <div>
@@ -86,7 +153,7 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <span>© 2026 Northlane. All rights reserved.</span>
+      <span>© 2026 JOBPORTAL. All rights reserved.</span>
       <span>Made for people looking for work.</span>
     </div>
   </footer>

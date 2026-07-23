@@ -150,13 +150,23 @@
    account.html — sign in / create account tabs
    ========================================================= */
 .account-wrap{ max-width: 480px; margin: 0 auto; padding: 80px 32px 120px; }
+
+/* Hide the two radio inputs that drive the tab switch — CSS only, no JS */
+.tab-input{
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
 .account-tabs{
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid var(--line);
   margin-bottom: 32px;
 }
-.account-tabs a{
+.tab-label{
   text-align: center;
   padding: 14px;
   font-family: var(--font-mono);
@@ -165,13 +175,45 @@
   letter-spacing: .05em;
   color: var(--ink-soft);
   background: var(--paper-2);
+  cursor: pointer;
+  transition: background .15s ease, color .15s ease;
 }
-.account-tabs a.active{ background: var(--ink); color: var(--paper); }
-.account-tabs a:first-child{ border-right: 1px solid var(--line); }
+.tab-label:first-of-type{ border-right: 1px solid var(--line); }
+
+/* Panels are hidden by default; the checked radio reveals its matching panel */
+.account-panel{ display: none; }
+
+#tab-signin:checked ~ .account-tabs label[for="tab-signin"],
+#tab-create:checked ~ .account-tabs label[for="tab-create"]{
+  background: var(--ink);
+  color: var(--paper);
+}
+#tab-signin:checked ~ .signin-panel{ display: block; }
+#tab-create:checked ~ .create-panel{ display: block; }
+
+.account-title{ font-size: 30px; margin-top: 12px; margin-bottom: 28px; }
+
 .form-foot{ text-align: center; margin-top: 18px; font-size: 13.5px; color: var(--ink-soft); }
-.form-foot a{ color: var(--teal); }
+.form-foot a, .form-foot-link{ color: var(--teal); cursor: pointer; }
+.form-foot-link:hover{ text-decoration: underline; }
+
 .divider{ display: flex; align-items: center; gap: 14px; margin: 24px 0; color: var(--ink-soft); font-size: 12.5px; font-family: var(--font-mono); }
 .divider::before, .divider::after{ content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* "Find a job" / "Hire for a role" toggle on the Create Account panel */
+.role-toggle{ display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+.role-option{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 12px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.role-option input{ accent-color: var(--teal); width: 15px; height: 15px; }
+.role-option:has(input:checked){ border-color: var(--teal); background: var(--card); }
 
 /* =========================================================
    post-job.html — employer job-posting form
