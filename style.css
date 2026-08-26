@@ -125,7 +125,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   align-items: baseline;
   gap: 2px;
 }
-.brand em{ color: var(--signal); font-style: normal; }
+.brand em{
+  color: var(--signal); /* <-- This colors only PORTAL */
+    font-style: normal;}
 .nav-links{
   display: flex;
   align-items: center;
